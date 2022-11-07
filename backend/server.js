@@ -14,6 +14,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+//REST APIs
+
+//error handler
+app.use(require("./middleware/errorHandler"));
+
 var server = app.listen(8081, function () {
   var port = server.address().port;
 
