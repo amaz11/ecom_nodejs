@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //REST APIs
-
+app.use("/api/auth", require("./routes/auth"));
 //error handler
 app.use(require("./middleware/errorHandler"));
 
